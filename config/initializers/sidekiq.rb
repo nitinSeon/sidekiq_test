@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-redis_url = ENV['CUSTOM_REDIS_URL'].present? ? ENV['CUSTOM_REDIS_URL'] || ENV['REDIS_URL'];
+redis_url = ENV['CUSTOM_REDIS_URL'].present? ? ENV['CUSTOM_REDIS_URL'] : ENV['REDIS_URL']
 Sidekiq.configure_client do |config|
     config.redis = { url: redis_url, size: 2, network_timeout: 5, ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE } }
   end

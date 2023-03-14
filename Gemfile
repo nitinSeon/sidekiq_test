@@ -57,3 +57,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "sidekiq", "~> 7.0"
+
+gem "redis", "~> 5.0"
